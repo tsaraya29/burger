@@ -1,13 +1,13 @@
 var express = require("express");
 
-var router = express.Router();
+var app = express.Router();
 
 // Import the model (burgers.js) to use its database functions.
 var burgers = require("../models/burgers.js");
 
 ///Routes 
 
-router.get("/", function(req, res){
+app.get("/", function(req, res){
     burgers.selectAll(function(data) {
         var burObject = 
         {
